@@ -10,9 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
-
         <!--<FrameLayout-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="wrap_content"-->
@@ -20,8 +17,6 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
 
             <FrameLayout
                 android:id="@+id/photo_container"
@@ -43,7 +38,7 @@
                         android:layout_gravity="bottom"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
                         android:fontFamily="sans-serif-condensed"
-                        android:textColor="#fff"
+                        android:textColor="@color/white"
                         android:lineSpacingMultiplier="0.9" />
                 <TextView
                     android:id="@+id/article_byline"
@@ -51,7 +46,7 @@
                     android:layout_gravity="end"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#fff" />
+                    android:textColor="@color/white" />
                 <!--<View-->
                     <!--android:id="@+id/customView"-->
                     <!--android:layout_width="match_parent"-->
@@ -65,8 +60,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxWidth="@dimen/detail_card_max_width"
-                android:background="#fff"
-                android:elevation="2dp"
+                android:background="@color/white"
+                android:elevation="@dimen/linear_layout_elevation"
                 android:layout_below="@+id/photo_container">
 
                 <TextView
@@ -82,52 +77,35 @@
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
-
-            <!--<LinearLayout-->
-                <!--android:id="@+id/meta_bar"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="142dp"-->
-                <!--android:background="#333"-->
-                <!--android:layout_gravity="right|center_vertical"-->
-                <!--android:orientation="vertical"-->
-                <!--android:paddingLeft="@dimen/detail_inner_horiz_margin"-->
-                <!--android:paddingRight="@dimen/detail_inner_horiz_margin"-->
-                <!--android:paddingTop="@dimen/detail_metabar_vert_padding"-->
-                <!--android:paddingBottom="@dimen/detail_metabar_vert_padding"-->
-                <!--android:layout_marginBottom="@dimen/detail_metabar_vert_padding">-->
-
-                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:id="@+id/article_title"&ndash;&gt;-->
-                    <!--&lt;!&ndash;style="?android:attr/textAppearanceLarge"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:fontFamily="sans-serif-condensed"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textColor="#fff"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textSize="@dimen/detail_title_text_size"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:lineSpacingMultiplier="0.9" />&ndash;&gt;-->
-
-                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:id="@+id/article_byline"&ndash;&gt;-->
-                    <!--&lt;!&ndash;style="?android:attr/textAppearanceSmall"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textColor="#8fff" />&ndash;&gt;-->
-            <!--</LinearLayout>-->
 </RelativeLayout>
     </com.example.xyzreader.ui.ObservableScrollView>
 
-    <ImageButton android:id="@+id/share_fab"
-        android:stateListAnimator="@anim/fab_state_list_anim"
-        android:background="@drawable/add_fab_background"
-        android:layout_gravity="bottom|end"
-        android:layout_marginRight="@dimen/fab_margin"
+    <!--<ImageButton android:id="@+id/share_fab"-->
+        <!--android:stateListAnimator="@anim/fab_state_list_anim"-->
+        <!--android:background="@drawable/add_fab_background"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_marginRight="@dimen/fab_margin"-->
+        <!--android:layout_marginBottom="@dimen/fab_margin"-->
+        <!--android:layout_width="56dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:src="@drawable/ic_share"-->
+        <!--android:elevation="@dimen/fab_elevation"-->
+        <!--android:contentDescription="@string/action_share" />-->
+
+    <android.support.design.widget.FloatingActionButton
+        style="@style/fab"
+        android:id="@+id/share_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_marginRight="@dimen/fab_margin"
         android:src="@drawable/ic_share"
-        android:elevation="@dimen/fab_elevation"
-        android:contentDescription="@string/action_share" />
+        android:contentDescription="@string/action_share"
+        app:borderWidth="@dimen/fab_borderWidth"
+        app:elevation="@dimen/fab_elevation"
+        app:fabSize="normal"
+        android:layout_gravity="end|bottom"
+        app:pressedTranslationZ="@dimen/fab_pressed_translationZ"/>
+
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>

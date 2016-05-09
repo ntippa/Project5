@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="4dp"
-    android:layout_marginRight="4dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="@dimen/layout_margin"
+    android:layout_marginRight="@dimen/layout_margin"
+    android:layout_marginTop="@dimen/layout_margin"
+    android:layout_marginBottom="@dimen/layout_margin"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground">
@@ -19,8 +19,8 @@
         <!--suppress AndroidLintContentDescription -->
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@color/photo_placeholder" />
 
         <!--style="@style/TextAppearance.AppCompat.Subhead"-->
@@ -29,10 +29,10 @@
             style="@style/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingTop="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="4dp"
+            android:paddingLeft="@dimen/textView_padding"
+            android:paddingTop="@dimen/textView_padding"
+            android:paddingRight="@dimen/textView_padding"
+            android:paddingBottom="@dimen/textView_padding_bottom"
             android:ellipsize="end"
             android:maxLines="4"
             tools:text="this is title"/>
@@ -42,9 +42,9 @@
             style="@style/subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="16dp"
+            android:paddingLeft="@dimen/textView_padding"
+            android:paddingRight="@dimen/textView_padding"
+            android:paddingBottom="@dimen/textView_padding"
             android:maxLines="1"
             android:singleLine="true"
             android:ellipsize="end"

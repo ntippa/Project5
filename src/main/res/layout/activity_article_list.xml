@@ -28,8 +28,8 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
-                android:elevation="4dp"
-                app:contentInsetStart="72dp"
+                android:elevation="@dimen/toolbar_elevation"
+                app:contentInsetStart="@dimen/content_inset_start"
                 app:layout_collapseMode="pin"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -72,13 +72,13 @@
         android:id="@+id/refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
         android:src="@drawable/ic_refresh_white_36dp"
-        app:borderWidth="0dp"
-        app:elevation="6dp"
+        app:borderWidth="@dimen/fab_borderWidth"
+        app:elevation="@dimen/fab_elevation"
         app:fabSize="normal"
         android:layout_gravity="end|bottom"
-        app:pressedTranslationZ="12dp" />
+        app:pressedTranslationZ="@dimen/fab_pressed_translationZ" />
 
 </android.support.design.widget.CoordinatorLayout>
